@@ -29,7 +29,7 @@
 }
 
 .principal-img {
-    background-image: url(/src/img/HomePictureVertical.JPEG);
+    background-image: url(../img/HomePictureVertical.JPEG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -43,7 +43,7 @@
     }
 
     .principal-img {
-        background-image: url(/src/img/homePicture.JPEG);
+        background-image: url(../img/homePicture.JPEG);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
