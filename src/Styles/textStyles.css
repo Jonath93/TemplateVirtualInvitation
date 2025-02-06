@@ -1,0 +1,37 @@
+.text-default-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+}
+
+.text-default {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+}
+
+.text-default-big {
+    font-size: 60px;
+    font-weight: 400;
+    color: black;
+}
+
+.text-family-monseiur {
+    font-family: "Monsieur La Doulaise", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text-size-default {
+    font-size: 70px;
+    color: black;
+}
+
+.text-color-silver {
+    color: silver;
+}
+
+.text-medium-Size {
+    font-size: 15px;
+
+}
