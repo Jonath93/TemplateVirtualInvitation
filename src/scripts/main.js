@@ -1,21 +1,32 @@
 window.onload = function () {
-    var fiveMinutes = 60 * 5,
-        display = document.querySelector('#txt_count_down');
-    countdownTimer(fiveMinutes, display);
+    var end = new Date('02/19/2025 10:1 AM');
+
+    timer = setInterval(countdownTimer(end)
+        , 100);
 }
-function countdownTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+function countdownTimer(end) {
+    var now = new Date();
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+    var distance = end - now;
+    if (distance < 0) {
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+        clearInterval(timer);
+        document.getElementById('txt_count_down').innerHTML = 'EXPIRED!';
 
-        display.textContent = minutes + ":" + seconds;
+        return;
+    }
+    var days = Math.floor(distance / _day);
+    var hours = Math.floor((distance % _day) / _hour);
+    var minutes = Math.floor((distance % _hour) / _minute);
+    var seconds = Math.floor((distance % _minute) / _second);
 
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
+    document.getElementById('txt_count_down').innerHTML = days + 'days ';
+    document.getElementById('txt_count_down').innerHTML += hours + 'hrs ';
+    document.getElementById('txt_count_down').innerHTML += minutes + 'mins ';
+    document.getElementById('txt_count_down').innerHTML += seconds + 'secs';
+
 }
